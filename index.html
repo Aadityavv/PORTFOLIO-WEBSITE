@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaditya Vijayvargiya</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="home">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+            <div class="col-md-3 mb-2 mb-md-0">
+              <a id="logo" href="#home" class="d-inline-flex text-decoration-none text-light">
+                &lt;/code&gt;
+              </a>
+            </div>
+      
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+              <li class="list-item"><a href="#home" class="nav-link px-2">Home</a></li>
+              <li class="list-item"><a href="#about" class="nav-link px-2">About me</a></li>
+              <li class="list-item"><a href="#project" class="nav-link px-2">Projects</a></li>
+              <li class="list-item"><a href="#contact" class="nav-link px-2">Contact me</a></li>
+            </ul>
+      
+            <div class="col-md-3 text-end">
+            </div>
+          </header>
+          <div class="row">
+            <div class="column c1">
+              <img src="./images/Picsart_24-05-17_07-17-27-984.png" alt="" height="560px">
+            </div>
+            <div class="column c2">
+              <p style="color: #f0d09d; font-size: 76px; font-weight: 600; padding-top: 10%;">printf("hello world\n");</p>
+              <p id="name">Hi, my name is <span style="font-weight: 700; color: white;font-size: 50px;">Aaditya Vijayvargiya</span></p>
+              <h2 style="color: #C582EB; font-weight: 400; font-size: 40px;">I am a <span id="changing_text" style="color: #96AAFF; font-weight: 700; font-size: 50px;">sigb</span></h2>
+            </div>
+          </div>
+    </section>
+
+    <!--  -->
+
+    <section id="about">
+      <p style="text-align: center; font-size: 60px; font-weight: 700;margin-bottom: 5%;">About Me</p>
+      <div class="row">
+        <div class="column c3">
+          <p style="text-align: center; font-size: 20px;">My name is Aaditya Vijayvargiya.<br>I am passionate about artificial intelligence and machine learning.<br>In addition, I am a full-stack web developer </p>
+          <div id="skills">
+            <p style="text-align: center; font-size: 40px;font-weight: 600;padding-top: 5%;">My skills</p>
+            <div id="myskills">
+              <div id="myskills_skills">HTML</div>
+              <div id="myskills_skills">CSS</div>
+              <div id="myskills_skills">Javascript</div>
+              <div id="myskills_skills">Angular JS</div>
+              <div id="myskills_skills">Java</div>
+              <div id="myskills_skills">Python</div>
+              <div id="myskills_skills">C</div>
+              <div id="myskills_skills">C++</div>
+              <div id="myskills_skills">DSA</div>
+              <div id="myskills_skills">Problem Solving</div>
+              <div id="myskills_skills">SQL</div>
+              <div id="myskills_skills">Video Editing</div>
+              <div id="myskills_skills">Node JS</div>
+              <div id="myskills_skills">Premiere Pro</div>
+              <div id="myskills_skills">Photography</div>
+            </div>
+          </div>
+          <p style="text-align: center; font-size: 40px;font-weight: 600;padding-top: 5%;">Education</p>
+          <div class="timeline-container">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="dash"></span>
+                    <span class="education">Class X (CISCE/ICSE) with 84.33% in 2020</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="dash"></span>
+                    <span class="education">Class XII CBSE with 77.4% in 2022</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="dash"></span>
+                    <span class="education">Graduation in B.Tech Computer Science Specializing in Full Stack AI in 2026</span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="column c4"><img src="./images/IMG-20231125-WA0043.jpg" alt="" height="400px" style="border-radius: 50px;" ></div>
+        
+      </div>
+    </section>
+    <!--  -->
+    <section id="project">
+      <p style="text-align: center; font-size: 60px; font-weight: 700;">Projects</p>
+      <div class="project_bg">
+
+      </div>
+      
+    </section>
+    <!--  -->
+    <section id="contact"></section>
+    <!--  -->
+    <section id="footer"></section>
+    <!--  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var textArray = ['web developer', 'software engineer', 'video editor', 'photographer'];
+        var textElement = $("#changing_text");
+        var timeline = gsap.timeline({repeat: -1});
+
+        textArray.forEach(function(element) {
+            timeline.to(textElement, {duration: 0.5, opacity: 0, onComplete: function() {
+                textElement.text(element);
+            }})
+            .to(textElement, {duration: 0.5, opacity: 1})
+            .to(textElement, {duration: 0.5, opacity: 1, delay: 1});
+        });
+    });
+    </script>
+</body>
+</html>
