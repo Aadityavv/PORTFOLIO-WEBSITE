@@ -38,7 +38,7 @@
 /* Existing CSS continued... */
 
 #home {
-    background-image: url(./images/printf\(“Hello\ Worldn”\).png);
+    background-image: url(./printf\(“Hello\ Worldn”\).png);
     height: 768px;
 }
 
@@ -145,5 +145,5 @@
     padding-top: 5%;
 }
 .project_bg{
-    background-image: url(./images/projects.png);
+    background-image: url(./projects.png);
 }
