@@ -109,12 +109,11 @@
 }
 .column.c5{
 width: 50%;
-padding-top: 5%;
 
 }
 .column.c6{
     width: 50%;
-    padding-top: 5%;
+    
 
 }
 
@@ -149,4 +148,7 @@ padding-top: 5%;
     font-size: 16px;
     color: #ffffff;
     margin-left: 10px;
+}
+#project.row{
+    margin: 5%;
 }
