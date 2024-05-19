@@ -142,8 +142,14 @@
     color: #666
 }
 #project{
-    padding-top: 5%;
 }
 .project_bg{
     background-image: url(./projects.png);
+}
+.column.c5{
+width: 50%;
+padding-top: 5%;
+}
+.column.c6{
+    width: 50%;
 }
