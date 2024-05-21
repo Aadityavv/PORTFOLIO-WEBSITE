@@ -1,4 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
@@ -10,7 +16,7 @@ html, body {
 
 #logo {
     font-family: "League Spartan", sans-serif;
-    font-size: 39px;   
+    font-size: 39px;
     font-weight: 800;
     text-decoration: none;
     color: #ffffff;
@@ -21,7 +27,6 @@ html, body {
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    margin-top: -10px;
     color: white !important;
     position: relative;
 }
@@ -54,8 +59,8 @@ html, body {
 }
 
 .column {
-    float: none; /* Ensures no floating */
-    padding: 0; /* Removes padding */
+    float: none;
+    padding: 0;
 }
 
 .column.c1 {
@@ -65,7 +70,6 @@ html, body {
 
 .column.c2 {
     width: 70%;
-    padding-right: 0;
 }
 
 .column.c1 > img {
@@ -161,8 +165,9 @@ html, body {
     margin-left: 10px;
 }
 
-#project .row {
+#project .row, .row {
     margin: 0;
+    padding: 0;
     width: 100%;
 }
 
