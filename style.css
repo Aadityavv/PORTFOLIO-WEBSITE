@@ -1,6 +1,9 @@
+html, body {
+    overflow-x: hidden;
+}
+
 #home {
     background-image: url(./printf\(“Hello\ Worldn”\).png);
-    /* height: 768px; */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -19,7 +22,7 @@
     font-size: 15px;
     font-weight: 500;
     margin-top: -10px;
-    color: white !important; /* Ensures initial text color is white */
+    color: white !important;
     position: relative;
 }
 
@@ -27,9 +30,9 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px; /* Adjust as needed */
+    bottom: -2px;
     width: 100%;
-    height: 2px; /* Adjust as needed */
+    height: 2px;
     background-color: rgb(136, 96, 168);
     transform: scaleX(0);
     transform-origin: right;
@@ -42,59 +45,65 @@
 }
 
 .list-item a:hover {
-    color: rgb(136, 96, 168) !important; /* Change text color on hover */
+    color: rgb(136, 96, 168) !important;
 }
 
 .list-item {
     margin-left: 20px;
     margin-right: 20px;
 }
+
 .column {
-    float: left;
-    /* padding: 20px; */
+    float: none; /* Ensures no floating */
+    padding: 0; /* Removes padding */
 }
+
 .column.c1 {
     width: 30%;
     padding-bottom: 50px;
 }
+
 .column.c2 {
-    width: 69%;
-    padding-right: 0%;
+    width: 70%;
+    padding-right: 0;
 }
-.row {
-    margin: 0px;
-}
-.column.c1>img {
+
+.column.c1 > img {
     padding-left: 15%;
 }
+
 #name {
     font-size: 40px;
     color: #C582EB;
 }
+
 #changing_text {
     margin: 5px 0;
-    opacity: 1; /* Make the text initially visible */
+    opacity: 1;
 }
+
 .column.c3 {
     width: 50%;
 }
+
 .column.c4 {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#about,#project {
+
+#about, #project {
     background-color: #000D16;
-    color: #ffff;
-    /* height: 600px; */
-    
+    color: #fff;
 }
+
 #myskills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 #myskills_skills {
     padding: 0.2rem 0.2rem;
     margin-bottom: 0.8rem;
@@ -103,21 +112,20 @@
     background: rgba(231, 209, 209, 0.2);
     border-radius: 5px;
     font-weight: 600;
-    color: #666
+    color: #666;
 }
-#project{
-}
-.project_bg{
+
+.project_bg {
     background-image: url(./projects.png);
 }
-.column.c5{
-width: 50%;
 
+.column.c5 {
+    width: 50%;
 }
-.column.c6{
+
+.column.c6 {
     width: 50%;
     margin-top: -10.5px;
-
 }
 
 .timeline-container {
@@ -140,7 +148,7 @@ width: 50%;
 
 .dash {
     position: absolute;
-    left: -22px; /* Adjust according to your needs */
+    left: -22px;
     margin-top: 11px;
     width: 20px;
     height: 2px;
@@ -152,56 +160,13 @@ width: 50%;
     color: #ffffff;
     margin-left: 10px;
 }
-#project.row{
-    margin: 5%;
+
+#project .row {
+    margin: 0;
+    width: 100%;
 }
-.contact-form{
-    background: #fff;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    width: 70%;
-}
-.contact-form .form-control{
-    border-radius:1rem;
-}
-.contact-image{
-    text-align: center;
-}
-.contact-image img{
-    border-radius: 6rem;
-    width: 11%;
-    margin-top: -3%;
-    transform: rotate(29deg);
-}
-.contact-form form{
-    padding: 14%;
-}
-.contact-form form .row{
-    margin-bottom: -7%;
-}
-.contact-form h3{
-    margin-bottom: 8%;
-    margin-top: -10%;
-    text-align: center;
-    color: #0062cc;
-}
-.contact-form .btnContact {
-    width: 50%;
-    border: none;
-    border-radius: 1rem;
-    padding: 1.5%;
-    background: #dc3545;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-}
-.btnContactSubmit
-{
-    width: 50%;
-    border-radius: 1rem;
-    padding: 1.5%;
-    color: #fff;
-    background-color: #0062cc;
-    border: none;
-    cursor: pointer;
+
+.row {
+    --bs-gutter-x: 0; /* Removes horizontal gutter */
+    --bs-gutter-y: 0;
 }
