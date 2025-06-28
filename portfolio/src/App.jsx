@@ -178,16 +178,16 @@ function App() {
               <span className="text-cyan-300 font-semibold">But I'm not just a backend wizard:</span> I build beautiful, responsive UIs with React, and I love solving tough data structure and algorithm challenges. My code impacts 15,000+ users and supports AI-driven research.
             </p>
             <div className="flex flex-wrap gap-3 justify-center md:justify-start mt-2 mb-4">
-              <span className="bg-cyan-900/80 px-3 py-1 rounded-full font-semibold text-sm md:text-base shadow">Spring Boot Specialist</span>
-              <span className="bg-cyan-800/80 px-3 py-1 rounded-full font-semibold text-sm md:text-base shadow">API & Microservices Architect</span>
-              <span className="bg-cyan-700/80 px-3 py-1 rounded-full font-semibold text-sm md:text-base shadow">React Frontend Pro</span>
-              <span className="bg-cyan-600/80 px-3 py-1 rounded-full font-semibold text-sm md:text-base shadow">DSA Enthusiast</span>
+              <span className="bg-cyan-500/80 px-3 py-1 rounded-full font-semibold text-sm md:text-base shadow">Spring Boot Specialist</span>
+              <span className="bg-cyan-500/80 px-3 py-1 rounded-full font-semibold text-sm md:text-base shadow">API & Microservices Architect</span>
+              <span className="bg-cyan-500/80 px-3 py-1 rounded-full font-semibold text-sm md:text-base shadow">React Frontend Pro</span>
+              <span className="bg-cyan-500/80 px-3 py-1 rounded-full font-semibold text-sm md:text-base shadow">DSA Enthusiast</span>
             </div>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start mt-2">
-              <a href="mailto:aadityavv9@gmail.com" className="text-cyan-300 underline hover:text-cyan-400 font-medium">aadityavv9@gmail.com</a>
+              <a href={ResumePDF} download className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded-full shadow transition-colors mb-4">Download Resume</a>
+              {/* <a href="mailto:aadityavv9@gmail.com" className="text-cyan-300 underline hover:text-cyan-400 font-medium">aadityavv9@gmail.com</a>
               <a href="https://www.linkedin.com/in/aadityavv9/" className="text-cyan-300 underline hover:text-cyan-400 font-medium" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://github.com/Aadityavv" className="text-cyan-300 underline hover:text-cyan-400 font-medium" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href={ResumePDF} download className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded-full shadow transition-colors ml-2">Download Resume</a>
+              <a href="https://github.com/Aadityavv" className="text-cyan-300 underline hover:text-cyan-400 font-medium" target="_blank" rel="noopener noreferrer">GitHub</a> */}
             </div>
           </div>
         </motion.section>
