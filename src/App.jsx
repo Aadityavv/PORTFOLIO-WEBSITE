@@ -115,12 +115,21 @@ function App() {
   // Contact form state
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [formSuccess, setFormSuccess] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
+    const handleResize = () => setShowCursor(window.innerWidth >= 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!showCursor) return;
     const move = (e) => setCursor({ x: e.clientX, y: e.clientY });
     window.addEventListener('mousemove', move);
     return () => window.removeEventListener('mousemove', move);
-  }, []);
+  }, [showCursor]);
 
   function handleFormChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -139,7 +148,7 @@ function App() {
       <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 z-[-2]" aria-hidden="true" />
       {/* Indian Army Banner (no margin) */}
       <div className="w-full bg-gradient-to-r from-[#FF9933] via-white to-[#138808] text-black text-center py-2 font-semibold shadow-md">
-        Proud contributor to mission-critical software for the <span className="font-bold bg-gradient-to-r from-[#FF9933] via-white to-[#138808] bg-clip-text text-transparent" style={{textShadow: '0 1px 4px rgba(0,0,0,0.35), 0 0px 1px #000'}}>Indian Army</span> <span className="font-bold" style={{color:'#138808'}}>🇮🇳</span> during <span className="font-bold text-black">Operation Sindoor</span> — deployed in Sikkim, with a PAN-India rollout in progress.
+        Proud contributor to mission-critical software for the <span className="font-bold bg-gradient-to-r from-[#FF9933] via-white to-[#138808] bg-clip-text text-transparent" style={{textShadow: '0 1px 4px rgba(0,0,0,0.35), 0 0px 1px #000'}}>Indian Army</span> <span className="font-bold" style={{color:'#138808'}}></span> during Operation<span className="font-bold text-red-700"> Sindoor</span>, deployed in Sikkim, with a PAN-India rollout in progress.
       </div>
       {/* Navbar (no margin) */}
       <nav className="backdrop-blur-md bg-black/60 sticky top-0 z-50 w-full shadow-md">
@@ -173,7 +182,7 @@ function App() {
               <span className="text-cyan-400">Spring Boot</span> is my superpower.
             </h1>
             <p className="max-w-xl text-base md:text-xl text-gray-300 mb-6">
-              I'm Aaditya, a backend-obsessed developer who crafts robust, scalable systems and APIs that power real-world products. I architect microservices, optimize databases, and automate deployments—turning complex business logic into elegant, maintainable code.<br/>
+              I'm Aaditya, a backend-obsessed developer who crafts robust, scalable systems and APIs that power real-world products. I architect microservices, optimize databases, and automate deployments, turning complex business logic into elegant, maintainable code.<br/>
               <span className="font-semibold bg-gradient-to-r from-[#FF9933] via-white to-[#138808] bg-clip-text text-transparent">Proudly built and deployed mission-critical software for the Indian Army during Operation Sindoor</span>.<br/>
               <span className="text-cyan-300 font-semibold">But I'm not just a backend wizard:</span> I build beautiful, responsive UIs with React, and I love solving tough data structure and algorithm challenges. My code impacts 15,000+ users and supports AI-driven research.
             </p>
@@ -202,16 +211,16 @@ function App() {
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-3 text-cyan-300">About Me</h2>
           <p className="text-base md:text-lg text-gray-200 mb-2">
-            I thrive in the backend—designing scalable architectures, building secure REST APIs, and deploying microservices on the cloud. My expertise in <span className="text-cyan-300 font-semibold">Spring Boot</span>, <span className="text-cyan-300 font-semibold">Node.js</span>, and <span className="text-cyan-300 font-semibold">PostgreSQL</span> allows me to deliver high-performance solutions that scale.
+            I thrive in the backend: designing scalable architectures, building secure REST APIs, and deploying microservices on the cloud. My expertise in <span className="text-cyan-300 font-semibold">Spring Boot</span>, <span className="text-cyan-300 font-semibold">Node.js</span>, and <span className="text-cyan-300 font-semibold">PostgreSQL</span> allows me to deliver high-performance solutions that scale.
           </p>
           <p className="text-base md:text-lg text-gray-200 mb-2">
             I'm also a strong advocate for clean code, test-driven development, and automation. My experience spans from healthcare platforms to AI-powered research tools, always focusing on reliability and user impact.
           </p>
           <p className="text-base md:text-lg text-gray-200 mb-2">
-            On the frontend, I create seamless user experiences with <span className="text-cyan-300 font-semibold">React</span> and <span className="text-cyan-300 font-semibold">TypeScript</span>. I'm passionate about data structures, algorithms, and continuous learning—always pushing myself to solve harder problems and build better products.
+            On the frontend, I create seamless user experiences with <span className="text-cyan-300 font-semibold">React</span> and <span className="text-cyan-300 font-semibold">TypeScript</span>. I'm passionate about data structures, algorithms, and continuous learning, always pushing myself to solve harder problems and build better products.
           </p>
-          <p className="text-gray-400 text-sm md:text-base">
-            If you're looking for a developer who can own the backend, collaborate on the frontend, and bring a problem-solving mindset to your team—I'm your guy.
+          <p className="text-gray-100 text-sm md:text-base">
+            If you're looking for a developer who can own the backend, collaborate on the frontend, and bring a problem-solving mindset to your team,  <span className="text-cyan-300 font-bold">I'm your guy.</span>
           </p>
         </motion.section>
 
@@ -443,21 +452,23 @@ function App() {
       </motion.footer>
 
       {/* Custom Cursor Blur Circle */}
-      <div
-        style={{
-          left: cursor.x - 75,
-          top: cursor.y - 75,
-          pointerEvents: 'none',
-          position: 'fixed',
-          zIndex: 0,
-          width: 150,
-          height: 150,
-          borderRadius: '50%',
-          background: 'rgba(56, 191, 248, 0.5)',
-          filter: 'blur(20px)',
-          transition: 'left 0.12s cubic-bezier(.4,2,.6,1), top 0.12s cubic-bezier(.4,2,.6,1)',
-        }}
-      />
+      {showCursor && (
+        <div
+          style={{
+            left: cursor.x - 75,
+            top: cursor.y - 75,
+            pointerEvents: 'none',
+            position: 'fixed',
+            zIndex: 0,
+            width: 150,
+            height: 150,
+            borderRadius: '50%',
+            background: 'rgba(56, 191, 248, 0.5)',
+            filter: 'blur(20px)',
+            transition: 'left 0.12s cubic-bezier(.4,2,.6,1), top 0.12s cubic-bezier(.4,2,.6,1)',
+          }}
+        />
+      )}
     </>
   )
 }
