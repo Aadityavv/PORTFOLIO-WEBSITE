@@ -153,14 +153,14 @@ function App() {
         </div>
       </nav>
       {/* Main Content (with margin) */}
-      <div className="relative z-[1] mx-6 md:mx-16">
+      <div className="relative z-[1] mx-4 md:mx-8">
         {/* Hero Section */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="flex flex-col md:flex-row items-center justify-center py-20 px-4 text-center md:text-left min-h-[60vh] gap-12 md:gap-20"
+          className="flex flex-col md:flex-row items-center justify-center py-16 px-4 text-center md:text-left min-h-[60vh] animate-fade-in gap-8 md:gap-16"
         >
           <div className="flex flex-col items-center md:items-start">
             <img src={ProfilePic} alt="Aaditya Vijayvargiya" className="w-40 h-40 md:w-56 md:h-56 rounded-full shadow-lg border-4 border-white object-cover mb-4 transition-transform duration-300 hover:scale-105" />
@@ -198,7 +198,7 @@ function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
-          className="py-12 md:py-20"
+          className="py-8 md:py-12"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-3 text-cyan-300">About Me</h2>
           <p className="text-base md:text-lg text-gray-200 mb-2">
@@ -221,7 +221,7 @@ function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
-          className="py-12 md:py-20"
+          className="py-8 md:py-12"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-cyan-300">Technical Skills</h2>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-6">
@@ -255,7 +255,7 @@ function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
-          className="py-12 md:py-20"
+          className="py-8 md:py-12"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-cyan-300">Experience</h2>
           <ol className="relative border-l-2 border-cyan-700/40 ml-2">
@@ -280,10 +280,10 @@ function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
-          className="py-12 md:py-20"
+          className="py-8 md:py-12"
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-10 text-cyan-300">Projects</h2>
-          <div className="grid sm:grid-cols-2 gap-10 md:gap-14">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-cyan-300">Projects</h2>
+          <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
             {/* UHS Project */}
             <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-5 md:p-6 shadow-lg hover:scale-[1.03] transition-transform">
               <h3 className="text-lg md:text-xl font-bold text-cyan-200 mb-2 flex items-center gap-2">
@@ -326,7 +326,7 @@ function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, delay: 0.5, ease: 'easeOut' }}
-          className="py-12 md:py-20"
+          className="py-8 md:py-12"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-cyan-300">Publications & Certifications</h2>
           <div className="mb-6">
@@ -355,7 +355,7 @@ function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, delay: 0.6, ease: 'easeOut' }}
-          className="py-12 md:py-20"
+          className="py-8 md:py-12"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-cyan-300">Education</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
@@ -376,7 +376,7 @@ function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, delay: 0.8, ease: 'easeOut' }}
-          className="max-w-lg mx-auto my-16 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 shadow-lg"
+          className="max-w-lg mx-auto my-12 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 shadow-lg"
         >
           <h2 className="text-2xl font-bold text-cyan-300 mb-4 text-center">Contact Me</h2>
           <form onSubmit={handleFormSubmit} className="flex flex-col gap-4">
